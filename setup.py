@@ -23,9 +23,9 @@ class DjangoManagementCommand(Command):
                         '--pythonpath=.'])
 
 
-def django_command(cmd, description):
+def django_command(cmd, desc):
     class command(DjangoManagementCommand):
-        description = description
+        description = desc
         django_command = cmd
 
     return command
